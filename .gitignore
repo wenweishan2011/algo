@@ -1,2 +1,5 @@
 # Project exclude paths
 /out/
+/.idea/
+/algo.iml
+/array/array.iml
