@@ -2,6 +2,7 @@ package linklist;
 
 /**
  * 实现单链表支持增删操作
+ * &链表反转
  */
 class SingleLinkList<T> {
     private final Node<T> head;
@@ -92,6 +93,25 @@ class SingleLinkList<T> {
         temp.next = temp.next.next;
     }
 
+    /**
+     * 链表反转
+     */
+    public void reverse(){
+        if(head.next == null) return;
+        Node<T> curr = head.next;
+        //防止产生环
+        head.next = null;
+        Node<T> prev = null;
+        Node<T> next;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head.next = prev;
+    }
+
     @Override
     public String toString() {
         Node<T> temp = head;
@@ -111,6 +131,10 @@ class SingleLinkList<T> {
         list.add(2);
         list.add(3);
         System.out.println(list.toString());
+
+        list.reverse();
+        System.out.println(list.toString());
+
 
         list.insert(2, 10);
         System.out.println(list.toString());
