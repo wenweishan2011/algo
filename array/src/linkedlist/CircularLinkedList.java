@@ -1,4 +1,4 @@
-package linklist;
+package linkedlist;
 
 /**
  * 循环链表支持增删操作

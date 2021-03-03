@@ -1,4 +1,4 @@
-package linklist;
+package linkedlist;
 
 /**
  * 实现单链表支持增删操作

@@ -1,4 +1,4 @@
-package linklist;
+package linkedlist;
 
 /**
  * 双向链表支持增删操作
